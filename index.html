@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cabines & Contentores - Construções Modulares</title>
+
+    <!-- Fontes -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS principal -->
+    <link href="styles.css" rel="stylesheet" />
+    <!-- <link href="output.css" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!DOCTYPE html>
+    <html lang="pt">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hero Carrossel com Autoplay</title>
+
+        <!-- Tailwind + DaisyUI -->
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!DOCTYPE html>
+        <html lang="pt">
+
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Hero Carrossel com Fade</title>
+            <link rel="icon" href="./public/favicon.png" type="image/png" />
+
+            <!-- Tailwind + DaisyUI -->
+            <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" type="text/css" />
+            <script src="https://cdn.tailwindcss.com"></script>
+
+            <style>
+                /* Animação de texto digitando */
+                @keyframes typing {
+                    from {
+                        width: 0;
+                    }
+
+                    to {
+                        width: 100%;
+                    }
+                }
+
+                @keyframes blink {
+                    50% {
+                        border-color: transparent;
+                    }
+                }
+
+                .typing-text {
+                    overflow: hidden;
+                    border-right: .15em solid #fff;
+                    white-space: nowrap;
+                    animation: typing 3s steps(40, end), blink .8s step-end infinite;
+                }
+
+                /* Transição suave entre slides */
+                .fade-slide {
+                    opacity: 0;
+                    transition: opacity 1.5s ease-in-out;
+                }
+
+                .fade-slide.active {
+                    opacity: 1;
+                    z-index: 1;
+                }
+
+                /* marquee */
+                /* @keyframes marquee {
+                    0% {
+                        transform: translateX(0);
+                    }
+
+                    100% {
+                        transform: translateX(-50%);
+                    }
+                }
+
+                .animate-marquee {
+                    display: flex;
+                    width: max-content;
+                    animation: marquee 30s linear infinite;
+                }
+
+                .animate-marquee:hover {
+                    animation-play-state: paused;
+                } */
+
+                @keyframes marquee {
+                    0% {
+                        transform: translateX(0%);
+                    }
+
+                    100% {
+                        transform: translateX(-50%);
+                    }
+                }
+
+                .animate-marquee {
+                    display: flex;
+                    width: max-content;
+                    animation: marquee 20s linear infinite;
+                }
+            </style>
+
+        </head>
+
+
+    <body style="padding: 0px ;margin: 0px;max-width: 100%;">
+        <dialog id="my_modal_1" class="modal">
+            <div class="modal-box">
+                <h3 class="text-lg font-bold">KayaMoz!</h3>
+
+                <p class="py-4">Press ESC key or click the button below to close <a
+                        href="https://www.linkedin.com/company/kayamoz" target="_blank"
+                        class="hover:text-blue-600 transition">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a></p>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/company/kayamoz" target="_blank"
+                    class="hover:text-blue-600 transition">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/kayamoz" target="_blank" class="hover:text-pink-500 transition">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/258849903403" target="_blank" class="hover:text-green-500 transition">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:info@kayamoz.co.mz" class="hover:text-red-500 transition">
+                    <i class="fas fa-envelope text-2xl"></i>
+                </a>
+
+                <!-- Chamada -->
+                <a href="tel:+258849903403" class="hover:text-blue-500 transition">
+                    <i class="fas fa-phone-alt text-2xl"></i>
+                </a>
+
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">fechar</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+
+
+
+        <!-- <div id="loader"
+            class="fixed inset-0 flex items-center justify-center bg-gray-50 z-50 transition-opacity duration-700">
+            <div class="flex flex-col items-center">
+                <span
+                    class="loader block w-10 h-10 border-4 border-t-transparent border-green-600 rounded-full animate-spin"></span>
+                <p class="mt-3 text-gray-700 font-medium">KayaMoz...</p>
+
+
+            </div>
+        </div> -->
+
+
+        <!-- Navbar -->
+        <header class="site-header">
+            <div class="container header-inner px-4 lg:px-20">
+                <h1 class="brand ">kayaMoz</h1>
+
+                <nav class="main-nav" id="main-nav">
+                    <a href="#servicos">Serviços</a>
+                    <a href="#sobre">Sobre Nós</a>
+                    <a href="#contacto">Contacto</a>
+                </nav>
+
+                <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu">☰</button>
+            </div>
+        </header>
+
+        <div class="p-1">
+            <div class="relative w-full h-[80vh] overflow-hidden ">
+
+                    <div class="fade-slide absolute inset-0">
+                    <img src="./public/1pre.png" class="w-full h-full object-cover" />
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center text-white">
+                        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center typing-text leading-snug px-4">Inove com confiança</h1>
+                        <p class="text-lg mb-6">Tecnologia e design lado a lado</p>
+                        <a href="#" class="btn btn-accent">Fale Conosco</a>
+                    </div>
+                </div>
+
+                  <!-- Slide 4 -->
+                <div class="fade-slide absolute inset-0">
+                    <img src="./public/cabs.png" class="w-full h-full object-cover" />
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center text-white">
+                        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center typing-text leading-snug px-4">Transformamos ideias em estruturas </h1>
+                        <p class="text-lg mb-6">Feitas para resistir — criadas para impressionar.</p>
+                        <a href="#" class="btn btn-accent">Fale Conosco</a>
+                    </div>
+                </div>
+                  <div class="fade-slide active absolute inset-0">
+                    <img src="./public/marquee/casaaaa.png" class="w-full h-full object-cover" />
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center text-white ">
+                        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center typing-text leading-snug px-4">Habitar o futuro começa com  </h1>
+                        <p class="text-lg mb-6">Design inteligente, conforto garantido.</p>
+                        <a href="#" class="btn btn-primary">Começar Agora</a>
+                    </div>
+                </div>
+
+             
+
+                <!-- Slide 1 -->
+              
+
+                <!-- Slide 2 -->
+                <!-- <div class="fade-slide absolute inset-0">
+                    <img src="./public/553040605_18133352845458148_7496300053885494125_n.jpg" class="w-full h-full object-cover" />
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center text-white">
+                        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center typing-text leading-snug px-4">Produtividade e elegância em módulos 
+                        </h1>
+                        <p class="text-lg mb-6">Escritórios modulares, prontos para crescer contigo.</p>
+                        <a href="#" class="btn btn-secondary">Ver Projetos</a>
+                    </div>
+                </div> -->
+
+                <!-- Slide 3 -->
+               
+
+                
+            </div>
+
+
+
+
+
+
+            <section id="sobre" class="bg-base-100 py-12">
+                <div class="container mx-auto px-6 lg:px-20">
+                    <div class="bg-white dark:bg-gray-900  rounded-2xl overflow-hidden">
+                        <div class="flex flex-col lg:flex-row items-center gap-6 p-6 lg:p-10">
+
+                            <!-- Área da Logo -->
+                            <div class="flex-shrink-0 w-full lg:w-1/2 flex justify-center lg:justify-start">
+                                <!-- Substitui o src pela tua logo -->
+                                <img id="company-logo" src="./public/kayalogo.jpg" alt="Logo da empresa"
+                                    class="object-contain h-50 w-full max-w-xs rounded-md" />
+                            </div>
+
+                            <!-- Área do Conteúdo -->
+                            <div class="w-full lg:w-1/2">
+                                <div class="flex flex-col gap-4">
+
+
+                                    <div id="company-info" class="text-gray-700 dark:text-gray-200 space-y-3">
+                                        <p>
+                                            <strong>Kayamoz</strong> é uma empresa moçambicana especializada na
+                                            fabricação de casas,
+                                            escritórios e cabines modulares em fibra de alta resistência.
+                                            Atuamos com foco em inovação, durabilidade e rapidez na construção,
+                                            oferecendo soluções modernas que se adaptam às necessidades de cada cliente.
+                                            <br> <br>
+
+                                            Nossos módulos são projetados para garantir conforto, segurança e
+                                            eficiência, ideais para residências, projetos comerciais e espaços
+                                            temporários. <br>
+
+                                            Com uma equipa técnica qualificada e um processo produtivo sustentável, a
+                                            <strong>Kayamoz</strong> transforma ideias em estruturas sólidas, reduzindo
+                                            o tempo e o custo
+                                            da construção tradicional.
+                                        </p>
+
+                                    </div>
+
+                                    <!-- CTA e contatos -->
+                                    <div class="mt-4 flex flex-col sm:flex-row gap-3">
+                                        <button onclick="my_modal_1.showModal()"
+                                            class="inline-flex items-center justify-center px-5 py-2 rounded-lg btn  brand">
+                                            Fale Conosco
+                                        </button>
+                                        <a href="#"
+                                            class="inline-flex items-center justify-center px-5 py-2 rounded-lg border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200">
+                                            Saiba Mais
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="border-t border-gray-100 dark:border-gray-700 mb-16">
+                <div class="overflow-hidden relative">
+                    <div class="flex animate-marquee gap-4 py-4 px-4">
+                        <img src="./public/marquee/mar1.jpg" alt=""
+                            class="h-24 w-36 object-cover rounded-lg shadow-sm" />
+                        <img src="./public/marquee/marq2.jpg" alt=""
+                            class="h-24 w-36 object-cover rounded-lg shadow-sm" />
+                        <img src="./public/marquee/marq3.png" alt=""
+                            class="h-24 w-36 object-cover rounded-lg shadow-sm" />
+                        <img src="./public/marquee/marq4.jpg" alt=""
+                            class="h-24 w-36 object-cover rounded-lg shadow-sm" />
+                        <img src="./public/marquee/marq5.jpg" alt=""
+                            class="h-24 w-36 object-cover rounded-lg shadow-sm" />
+                        <img src="./public//marquee/voda.jpg" alt=""
+                            class="h-24 w-36 object-cover rounded-lg shadow-sm" />
+                        <img src="./public/marquee/planta.jpg" alt=""
+                            class="h-24 w-36 object-cover rounded-lg shadow-sm" />
+                    </div>
+                </div>
+            </div>
+
+            <section id="servicos" class="bg-gray-50 dark:bg-gray-900  py-20">
+                <div class="max-w-7xl mx-auto px-6 text-center">
+                    <!-- Título -->
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#19a158] dark:text-white mb-4">
+                        Nossos Serviços
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12">
+                        A <strong>Kayamoz</strong> oferece soluções modulares em fibra,
+                        desenvolvidas para tornar a construção mais rápida, moderna e sustentável.
+                    </p>
+
+                    <!-- Grid de Serviços -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                        <!-- Serviço 1 -->
+                        <div class="bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition rounded-2xl p-8">
+                            <div class="flex justify-center mb-6 text-[#19a158]">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                        d="M3 10l9-6 9 6-9 6-9-6zM3 10v10a2 2 0 002 2h14a2 2 0 002-2V10M9 21v-8h6v8" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                                Casas Modulares
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                Casas modernas em fibra, com excelente isolamento térmico e montagem rápida.
+                                Soluções completas para habitação familiar ou espaços de lazer.
+                            </p>
+                        </div>
+
+                        <!-- Serviço 2 -->
+                        <div class="bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition rounded-2xl p-8">
+                            <div class="flex justify-center mb-6 text-[#19a158]">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                        d="M12 8c-2.21 0-4 .79-4 2v6h8v-6c0-1.21-1.79-2-4-2zM6 8v8H4a2 2 0 01-2-2V8a2 2 0 012-2h2zm12 0v8h2a2 2 0 002-2V8a2 2 0 00-2-2h-2z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                                Escritórios Modulares
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                Estruturas versáteis e elegantes para empresas, canteiros de obra ou startups.
+                                Design moderno, instalação rápida e total personalização.
+                            </p>
+                        </div>
+
+                        <!-- Serviço 3 -->
+                        <div class="bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition rounded-2xl p-8">
+                            <div class="flex justify-center mb-6 text-[#19a158]">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                        d="M9.75 17L9 21h6l-.75-4M9 4h6v6H9z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                                Cabines Modulares
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                Cabines de segurança, sanitárias ou multifuncionais em fibra.
+                                Resistentes, compactas e ideais para espaços públicos ou privados.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- Botão de ação -->
+                    <div class="mt-12">
+                        <a href="#contacto"
+                            class="px-8 py-3 bg-[#19a158] text-white font-medium rounded-lg hover:bg-blue-700 transition">
+                            Solicitar Orçamento
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Section de detalhes individuais -->
+            <section class="py-16 bg-white">
+                <div class="max-w-6xl mx-auto px-6">
+                    <h2 class="text-3xl font-bold text-[#19a158] text-center mb-12">Conheça Nossos Projetos</h2>
+
+                    <!-- Exemplo: Casas Modulares -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16 items-center">
+                        <div>
+                            <img src="./public/marquee/casaaaa.png" alt="Casas Modulares" class="rounded-xl shadow-md">
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Casas Modulares</h3>
+                            <p class="text-gray-600 mb-4">
+                                Nossas casas modulares são desenvolvidas com foco em conforto, estética e durabilidade.
+                                São ideais para quem busca uma solução habitacional rápida e moderna.
+                            </p>
+                            <ul class="text-gray-700 space-y-2">
+                                <li>✅ Estrutura em aço e fibra de alta resistência</li>
+                                <li>✅ Isolamento térmico e acústico</li>
+                                <li>✅ Design personalizável</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Exemplo: Escritórios Modulares -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                        <div class="order-2 lg:order-1">
+                            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Escritórios Modulares</h3>
+                            <p class="text-gray-600 mb-4">
+                                Crie um ambiente de trabalho moderno e eficiente com nossos módulos empresariais
+                                prontos.
+                                Soluções que combinam funcionalidade e design corporativo.
+                            </p>
+                            <ul class="text-gray-700 space-y-2">
+                                <li>✅ Instalação rápida</li>
+                                <li>✅ Layout flexível</li>
+                                <li>✅ Acabamentos premium</li>
+                            </ul>
+                        </div>
+                        <div class="order-1 lg:order-2">
+                            <img src="./public/marquee/ttyf.jpg" alt="Escritórios Modulares"
+                                class="rounded-xl shadow-md">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="galeria" class="py-20 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Galeria de Projetos</h2>
+                        <p class="text-gray-600 mt-3">
+                            Conheça alguns dos nossos projetos modulares — desde cabines compactas até construções
+                            residenciais e corporativas.
+                        </p>
+                    </div>
+
+                    <!-- Grelha de imagens -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500">
+                            <img src="./public/marquee/casaaaa.png" alt="Casa Modular"
+                                class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+                                <span class="text-white text-lg font-medium">Casa Modular</span>
+                            </div>
+                        </div>
+
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500">
+                            <img src="./public/marquee/marq5.jpg" alt="Escritório Modular"
+                                class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+                                <span class="text-white text-lg font-medium">Escritório Modular</span>
+                            </div>
+                        </div>
+
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500">
+                            <img src="./public/marquee/cabine.jpg" alt="Cabine Modular"
+                                class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+                                <span class="text-white text-lg font-medium">Cabine Modular</span>
+                            </div>
+                        </div>
+
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500">
+                            <img src="./public/marquee/planta.jpg" alt="Projeto Residencial"
+                                class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+                                <span class="text-white text-lg font-medium">Projeto Residencial</span>
+                            </div>
+                        </div>
+
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500">
+                            <img src="./public/marquee/marq3.png" alt="Sede Corporativa Modular"
+                                class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+                                <span class="text-white text-lg font-medium">Sede Corporativa</span>
+                            </div>
+                        </div>
+
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500">
+                            <img src="./public/cabs.png" alt="Cabine de Segurança"
+                                class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+                                <span class="text-white text-lg font-medium">Cabine de Segurança</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+            <!-- Contacto -->
+            <section id="contacto" class="section contact-section  mt-12 mb-12">
+                <div class="container contact-inner">
+                    <h3>Entre em Contacto</h3>
+                    <p>Envie-nos uma mensagem ou solicite um orçamento personalizado.</p>
+                    <p class="text-center text-gray-600 text-xs">info@kayamoz.co.mz</p>
+                    <a class="btn-secondary" href="mailto:info@cabinepro.co.mz">Enviar Email</a>
+                </div>
+            </section>
+
+            <footer class="footer sm:footer-horizontal bg-base-300 text-base-content p-10">
+                <nav>
+                    <h6 class="footer-title">Services</h6>
+                    <a class="link link-hover">Casas modular</a>
+                    <a class="link link-hover">Cabines modular</a>
+                    <a class="link link-hover">Projetos Residencial</a>
+                    <a class="link link-hover">Sede Corporativa</a>
+                    <!-- <a class="link link-hover">Advertisement</a> -->
+                </nav>
+                <nav>
+                    <h6 class="footer-title">Empresa</h6>
+                    <a class="link link-hover">Sobre</a>
+                    <a class="link link-hover">Contatos</a>
+                    <a class="link link-hover">Servicos</a>
+                    <a class="link link-hover">Galeria</a>
+                </nav>
+                <nav>
+                    <h6 class="footer-title">Social</h6>
+                    <div class="grid grid-flow-col gap-4">
+                        <a>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                class="fill-current">
+                                <path
+                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                class="fill-current">
+                                <path
+                                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                class="fill-current">
+                                <path
+                                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+
+
+
+            <script>
+                // Menu mobile simples
+                const toggle = document.getElementById('menu-toggle');
+                const nav = document.getElementById('main-nav');
+
+                toggle.addEventListener('click', () => {
+                    nav.classList.toggle('nav-open');
+                });
+            </script>
+
+
+
+
+
+            <script>
+                // Simula carregamento
+                window.addEventListener('load', () => {
+                    const loader = document.getElementById('loader');
+                    loader.classList.add('opacity-0');
+                    setTimeout(() => loader.style.display = 'none', 700);
+                });
+            </script>
+
+            <script>
+                const slides = document.querySelectorAll(".fade-slide");
+                let current = 0;
+
+                function showNextSlide() {
+                    slides[current].classList.remove("active");
+                    current = (current + 1) % slides.length;
+                    slides[current].classList.add("active");
+                }
+
+                setInterval(showNextSlide, 6000); // muda a cada 6s
+            </script>
+
+    </body>
+
+    </html>
