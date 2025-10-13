@@ -39,6 +39,46 @@
         <script src="https://cdn.tailwindcss.com"></script>
 
         <style>
+            #loader {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #ffffff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 9999;
+                transition: opacity 0.5s ease;
+            }
+
+            /* Animação do spinner */
+            .spinner {
+                border: 8px solid #f3f3f3;
+                border-top: 8px solid #3498db;
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                animation: spin 1s linear infinite;
+            }
+
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            /* Conteúdo da página oculto inicialmente */
+            #content {
+                display: none;
+                padding: 20px;
+            }
+
             /* === Fundo animado === */
             .bg-slide {
                 position: absolute;
@@ -283,6 +323,9 @@
 
 
 <body style="padding: 0px ;margin: 0px;max-width: 100%;">
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
     <dialog id="my_modal_1" class="modal">
         <div class="modal-box bg-white/90 backdrop-blur-md shadow-xl border border-gray-200">
             <h3 class="text-lg font-bold text-gray-800">KayaMoz!</h3>
@@ -435,25 +478,25 @@
                     <li>
                         <a href="#"
                             class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                            About
+                            Sobre
                         </a>
                     </li>
                     <li>
                         <a href="#"
                             class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                            Services
+                            Servicos
                         </a>
                     </li>
                     <li>
                         <a href="#"
                             class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                            Pricing
+                            Precos
                         </a>
                     </li>
                     <li>
                         <a href="#"
                             class="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                            Contact
+                            Contactos
                         </a>
                     </li>
                 </ul>
@@ -1092,6 +1135,19 @@
 
 
         <script>
+            window.addEventListener("load", function () {
+                const loader = document.getElementById("loader");
+                const content = document.getElementById("content");
+
+                // Oculta o loader com transição
+                loader.style.opacity = 0;
+                setTimeout(() => {
+                    loader.style.display = "none";
+                    content.style.display = "block";
+                    document.body.style.overflow = "auto"; // ativa scroll
+                }, 500); // tempo da transição
+            });
+
             // Menu mobile simples
             const toggle = document.getElementById('menu-toggle');
             const nav = document.getElementById('main-nav');
