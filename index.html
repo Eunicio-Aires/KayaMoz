@@ -284,47 +284,69 @@
 
 <body style="padding: 0px ;margin: 0px;max-width: 100%;">
     <dialog id="my_modal_1" class="modal">
+        <div class="modal-box bg-white/90 backdrop-blur-md shadow-xl border border-gray-200">
+            <h3 class="text-lg font-bold text-gray-800">KayaMoz!</h3>
+
+            <p class="py-4 text-gray-600">
+                Seleciona o canal abaixo para entrar em contato:
+            </p>
+
+            <div class="flex items-center gap-6 justify-center text-2xl mt-2">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/company/kayamozz" target="_blank"
+                    class="text-blue-600 hover:scale-110 transition-transform" title="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-7 h-7">
+                        <path
+                            d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.77 0 5-2.24 5-5v-14c0-2.76-2.23-5-5-5zm-11.75 20h-2.5v-10h2.5v10zm-1.25-11.27c-.83 0-1.5-.68-1.5-1.52s.67-1.52 1.5-1.52 1.5.68 1.5 1.52-.67 1.52-1.5 1.52zm13 11.27h-2.5v-5.39c0-1.28-.03-2.93-1.78-2.93-1.78 0-2.05 1.39-2.05 2.84v5.48h-2.5v-10h2.4v1.37h.03c.33-.62 1.15-1.27 2.38-1.27 2.54 0 3.02 1.67 3.02 3.84v6.06z" />
+                    </svg>
+                </a>
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/258849903403" target="_blank"
+                    class="text-green-600 hover:scale-110 transition-transform" title="WhatsApp">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-7 h-7" viewBox="0 0 24 24">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.148-.67.15-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.447-.52.149-.174.198-.297.297-.496.099-.198.05-.372-.025-.52-.075-.149-.669-1.611-.916-2.206-.242-.579-.487-.501-.67-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.074-.793.372-.273.297-1.04 1.016-1.04 2.479s1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.414.248-.694.248-1.288.173-1.414-.074-.124-.273-.198-.57-.347m-5.421 7.403h-.003a8.61 8.61 0 01-4.37-1.194l-.314-.187-3.245.853.868-3.166-.204-.324a8.56 8.56 0 01-1.308-4.52c.001-4.733 3.858-8.59 8.592-8.59 2.295 0 4.448.894 6.07 2.517a8.544 8.544 0 012.523 6.076c-.002 4.733-3.859 8.59-8.609 8.59m7.39-15.988A10.506 10.506 0 0012.05 0C5.495 0 .15 5.345.147 11.9c0 2.1.551 4.157 1.602 5.967L0 24l6.301-1.642a11.842 11.842 0 005.735 1.463h.005c6.554 0 11.9-5.345 11.903-11.9a11.82 11.82 0 00-3.458-8.626" />
+                    </svg>
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:kaya.moz258@gmail.com" class="text-red-500 hover:scale-110 transition-transform"
+                    title="E-mail">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-7 h-7" viewBox="0 0 24 24">
+                        <path
+                            d="M12 13.065l-11.985-8.065h23.97l-11.985 8.065zm0 2.06l-12-8.072v12.947h24v-12.947l-12 8.072z" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="modal-action">
+                <form method="dialog">
+                    <button class="btn bg-gray-800 text-white hover:bg-gray-700">Fechar</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- <dialog id="my_modal_1" class="modal">
         <div class="modal-box">
             <h3 class="text-lg font-bold">KayaMoz!</h3>
 
             <p class="py-4">Seleciona o canal <a href="https://www.linkedin.com/company/kayamoz" target="_blank"
                     class="hover:text-blue-600 transition">
-                    <i class="fab fa-linkedin-in"></i>
-                </a></p>
+                  
+                </p>
 
-            <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/company/kayamoz" target="_blank" class="hover:text-blue-600 transition">
-                <i class="fab fa-linkedin text-2xl"></i>
-            </a>
-
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/kayamoz" target="_blank" class="hover:text-pink-500 transition">
-                <i class="fab fa-instagram text-2xl"></i>
-            </a>
-
-            <!-- WhatsApp -->
-            <a href="https://wa.me/258849903403" target="_blank" class="hover:text-green-500 transition">
-                <i class="fab fa-whatsapp text-2xl"></i>
-            </a>
-
-            <!-- Email -->
-            <a href="mailto:info@kayamoz.co.mz" class="hover:text-red-500 transition">
-                <i class="fas fa-envelope text-2xl"></i>
-            </a>
-
-            <!-- Chamada -->
-            <a href="tel:+258849903403" class="hover:text-blue-500 transition">
-                <i class="fas fa-phone-alt text-2xl"></i>
-            </a>
+          
 
             <div class="modal-action">
                 <form method="dialog">
-                    <!-- if there is a button in form, it will close the modal -->
+                    
                     <button class="btn">fechar</button>
                 </form>
             </div>
         </div>
-    </dialog>
+    </dialog> -->
 
 
 
@@ -466,11 +488,25 @@
             <!-- Conteúdo fixo -->
             <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center z-10">
                 <h1 class="text-3xl md:text-5xl font-bold mb-3 animate-slideUp">
-                    Kayamoz Construções Modulares
+                    Kayamoz - Tecnologia de Prefabricação Modular
                 </h1>
                 <p class="text-lg mb-6 animate-fadeText">
                     Estruturas modernas, fortes e criadas para impressionar.
                 </p>
+
+                <p class="flex items-center justify-center gap-4 text-gray-700 text-sm mt-2 mb-3">
+                    <!-- Ícone de telefone -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                        class="w-5 h-5 text-emerald-600">
+                        <path
+                            d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1H7.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                    </svg>
+
+                    <!-- Números de telefone -->
+                    <a href="tel:+258845761113" class="hover:text-emerald-700 transition text-white">845 761 113</a> |
+                    <a href="tel:+258871901113" class="hover:text-emerald-700 transition text-white">871 901 113</a>
+                </p>
+
 
                 <!-- Contatos -->
                 <div class="flex gap-6 mt-2 justify-center">
@@ -489,10 +525,10 @@
                         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
                             alt="LinkedIn" class="w-6 h-6 invert">
                     </a>
-                    <a href="tel:+258849903403" class="hover:scale-110 transition-transform duration-300">
+                    <!-- <a href="tel:+258849903403" class="hover:scale-110 transition-transform duration-300">
                         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/phone.svg" alt="Telefone"
                             class="w-6 h-6 invert">
-                    </a>
+                    </a> -->
                 </div>
             </div>
         </div>
@@ -662,14 +698,24 @@
         <div class="border-t border-gray-100 dark:border-gray-700 mb-16">
             <div class="overflow-hidden relative">
                 <div class="flex animate-marquee gap-4 py-4 px-4">
-                    <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333117/WhatsApp_Image_2025-10-07_at_16.56.31_1_e0dhb4.jpg" alt="" class="h-24 w-36 object-cover rounded-lg shadow-sm" />
-                    <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333117/kayamozz_ibztbh.jpg" alt="" class="h-24 w-36 object-cover rounded-lg shadow-sm" />
-                    <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333118/WhatsApp_Image_2025-10-07_at_16.56.32_1_y14qvs.jpg" alt="" class="h-24 w-36 object-cover rounded-lg shadow-sm" />
-                    <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333120/WhatsApp_Image_2025-10-07_at_16.55.22_1_ahksja.jpg" alt="" class="h-24 w-36 object-cover rounded-lg shadow-sm" />
-                    <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333120/kayamoz1_iygbjc.jpg" alt="" class="h-24 w-36 object-cover rounded-lg shadow-sm" />
-                    <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333120/WhatsApp_Image_2025-10-07_at_16.56.35_1_m9e0fo.jpg" alt="" class="h-24 w-36 object-cover rounded-lg shadow-sm" />
-                    <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333121/WhatsApp_Image_2025-10-07_at_16.56.31_fqkzmu.jpg" alt="" class="h-24 w-36 object-cover rounded-lg shadow-sm" />
-                    <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333123/WhatsApp_Image_2025-10-07_at_16.56.35_oitilb.jpg" alt="" class="h-24 w-36 object-cover rounded-lg shadow-sm" />
+                    <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333117/WhatsApp_Image_2025-10-07_at_16.56.31_1_e0dhb4.jpg"
+                        alt="" class="h-24 w-36 object-cover rounded-lg shadow-sm" />
+                    <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333117/kayamozz_ibztbh.jpg" alt=""
+                        class="h-24 w-36 object-cover rounded-lg shadow-sm" />
+                    <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333118/WhatsApp_Image_2025-10-07_at_16.56.32_1_y14qvs.jpg"
+                        alt="" class="h-24 w-36 object-cover rounded-lg shadow-sm" />
+                    <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333120/WhatsApp_Image_2025-10-07_at_16.55.22_1_ahksja.jpg"
+                        alt="" class="h-24 w-36 object-cover rounded-lg shadow-sm" />
+                    <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333120/kayamoz1_iygbjc.jpg" alt=""
+                        class="h-24 w-36 object-cover rounded-lg shadow-sm" />
+                    <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333120/WhatsApp_Image_2025-10-07_at_16.56.35_1_m9e0fo.jpg"
+                        alt="" class="h-24 w-36 object-cover rounded-lg shadow-sm" />
+                    <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333121/WhatsApp_Image_2025-10-07_at_16.56.31_fqkzmu.jpg"
+                        alt="" class="h-24 w-36 object-cover rounded-lg shadow-sm" />
+                    <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333123/WhatsApp_Image_2025-10-07_at_16.56.35_oitilb.jpg"
+                        alt="" class="h-24 w-36 object-cover rounded-lg shadow-sm" />
+                    <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333469/kayalogo_dyvcwi.jpg" alt=""
+                        class="h-24 w-36 object-cover rounded-lg shadow-sm" />
                 </div>
             </div>
         </div>
@@ -764,7 +810,8 @@
                 <!-- Exemplo: Casas Modulares -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16 items-center">
                     <div>
-                        <img src="./public/marquee/casaaaa.png" alt="Casas Modulares" class="rounded-xl shadow-md">
+                        <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333120/WhatsApp_Image_2025-10-07_at_16.55.22_1_ahksja.jpg"
+                            alt="Casas Modulares" class="rounded-xl shadow-md">
                     </div>
                     <div>
                         <h3 class="text-2xl font-semibold text-gray-800 mb-4">Casas Modulares</h3>
@@ -796,7 +843,8 @@
                         </ul>
                     </div>
                     <div class="order-1 lg:order-2">
-                        <img src="./public/marquee/ttyf.jpg" alt="Escritórios Modulares" class="rounded-xl shadow-md">
+                        <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333117/kayamozz_ibztbh.jpg"
+                            alt="Escritórios Modulares" class="rounded-xl shadow-md">
                     </div>
                 </div>
             </div>
@@ -817,7 +865,8 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div
                         class="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500">
-                        <img src="./public/marquee/casaaaa.png" alt="Casa Modular"
+                        <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760338668/ChatGPT_Image_6_10_2025_10_46_52_oohrd4.png"
+                            alt="Casa Modular"
                             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
                         <div
                             class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
@@ -827,7 +876,8 @@
 
                     <div
                         class="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500">
-                        <img src="./public/marquee/marq5.jpg" alt="Escritório Modular"
+                        <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760338656/73455983_431698650855523_5772827172877252339_n_enjrgs.jpg"
+                            alt="Escritório Modular"
                             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
                         <div
                             class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
@@ -837,7 +887,8 @@
 
                     <div
                         class="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500">
-                        <img src="./public/marquee/cabine.jpg" alt="Cabine Modular"
+                        <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333120/WhatsApp_Image_2025-10-07_at_16.55.22_1_ahksja.jpg"
+                            alt="Cabine Modular"
                             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
                         <div
                             class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
@@ -847,7 +898,8 @@
 
                     <div
                         class="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500">
-                        <img src="./public/marquee/planta.jpg" alt="Projeto Residencial"
+                        <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760338656/73455983_431698650855523_5772827172877252339_n_enjrgs.jpg"
+                            alt="Projeto Residencial"
                             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
                         <div
                             class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
@@ -857,7 +909,8 @@
 
                     <div
                         class="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500">
-                        <img src="./public/marquee/marq3.png" alt="Sede Corporativa Modular"
+                        <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333120/WhatsApp_Image_2025-10-07_at_16.56.34_g0rmw2.jpg"
+                            alt="Sede Corporativa Modular"
                             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
                         <div
                             class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
@@ -867,11 +920,52 @@
 
                     <div
                         class="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500">
-                        <img src="./public/cabs.png" alt="Cabine de Segurança"
+                        <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333117/WhatsApp_Image_2025-10-07_at_16.56.31_1_e0dhb4.jpg"
+                            alt="Cabine de Segurança"
                             class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
                         <div
                             class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
                             <span class="text-white text-lg font-medium">Cabine de Segurança</span>
+                        </div>
+                    </div>
+                    <div
+                        class="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500">
+                        <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333117/kayamozz_ibztbh.jpg"
+                            alt="Cabine de Segurança"
+                            class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+                            <span class="text-white text-lg font-medium">outros</span>
+                        </div>
+                    </div>
+                    <div
+                        class="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500">
+                        <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333117/WhatsApp_Image_2025-10-07_at_16.55.22_yrgcvl.jpg"
+                            alt="Cabine de Segurança"
+                            class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+                            <span class="text-white text-lg font-medium">outros</span>
+                        </div>
+                    </div>
+                    <div
+                        class="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500">
+                        <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333118/WhatsApp_Image_2025-10-07_at_16.56.32_1_y14qvs.jpg"
+                            alt="Cabine de Segurança"
+                            class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+                            <span class="text-white text-lg font-medium">outros</span>
+                        </div>
+                    </div>
+                    <div
+                        class="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500">
+                        <img src="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333120/WhatsApp_Image_2025-10-07_at_16.56.35_1_m9e0fo.jpg"
+                            alt="Cabine de Segurança"
+                            class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+                            <span class="text-white text-lg font-medium">outros</span>
                         </div>
                     </div>
                 </div>
@@ -884,14 +978,69 @@
 
 
         <!-- Contacto -->
-        <section id="contacto" class="section contact-section  mt-12 mb-12">
+        <section id="contacto" class="section contact-section mt-12 mb-12">
+            <div class="container contact-inner text-center space-y-4">
+                <h3 class="text-2xl font-bold text-gray-800">Entre em Contacto</h3>
+                <p class="text-gray-600">Envie-nos uma mensagem ou solicite um orçamento personalizado.</p>
+
+                <!-- Email principal -->
+                <p class="text-gray-500 text-sm">info@kayamoz.co.mz</p>
+
+                <!-- Botão de e-mail -->
+                <a class="btn-secondary inline-block px-6 py-2 bg-emerald-600 text-white rounded-lg shadow hover:bg-emerald-700 transition"
+                    href="mailto:info@kayamoz.co.mz">
+                    Enviar Email
+                </a>
+
+                <!-- Ícones de contato -->
+                <div class="flex justify-center gap-8 mt-6 text-3xl">
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/258849903403" target="_blank"
+                        class="text-green-600 hover:scale-110 transition-transform" title="WhatsApp">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-8 h-8">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.148-.67.15-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.447-.52.149-.174.198-.297.297-.496.099-.198.05-.372-.025-.52-.075-.149-.669-1.611-.916-2.206-.242-.579-.487-.501-.67-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.074-.793.372-.273.297-1.04 1.016-1.04 2.479s1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.414.248-.694.248-1.288.173-1.414-.074-.124-.273-.198-.57-.347m-5.421 7.403h-.003a8.61 8.61 0 01-4.37-1.194l-.314-.187-3.245.853.868-3.166-.204-.324a8.56 8.56 0 01-1.308-4.52c.001-4.733 3.858-8.59 8.592-8.59 2.295 0 4.448.894 6.07 2.517a8.544 8.544 0 012.523 6.076c-.002 4.733-3.859 8.59-8.609 8.59m7.39-15.988A10.506 10.506 0 0012.05 0C5.495 0 .15 5.345.147 11.9c0 2.1.551 4.157 1.602 5.967L0 24l6.301-1.642a11.842 11.842 0 005.735 1.463h.005c6.554 0 11.9-5.345 11.903-11.9a11.82 11.82 0 00-3.458-8.626" />
+                        </svg>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/company/kayamoz" target="_blank"
+                        class="text-blue-600 hover:scale-110 transition-transform" title="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-8 h-8">
+                            <path
+                                d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.77 0 5-2.24 5-5v-14c0-2.76-2.23-5-5-5zm-11.75 20h-2.5v-10h2.5v10zm-1.25-11.27c-.83 0-1.5-.68-1.5-1.52s.67-1.52 1.5-1.52 1.5.68 1.5 1.52-.67 1.52-1.5 1.52zm13 11.27h-2.5v-5.39c0-1.28-.03-2.93-1.78-2.93-1.78 0-2.05 1.39-2.05 2.84v5.48h-2.5v-10h2.4v1.37h.03c.33-.62 1.15-1.27 2.38-1.27 2.54 0 3.02 1.67 3.02 3.84v6.06z" />
+                        </svg>
+                    </a>
+
+                    <!-- Telefone -->
+                    <a href="tel:+258849903403" class="text-gray-800 hover:scale-110 transition-transform"
+                        title="Ligar">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 24 24">
+                            <path
+                                d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1H7.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                        </svg>
+                    </a>
+
+                    <!-- Email -->
+                    <a href="mailto:info@kayamoz.co.mz" class="text-red-500 hover:scale-110 transition-transform"
+                        title="E-mail">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 24 24">
+                            <path
+                                d="M12 13.065l-11.985-8.065h23.97l-11.985 8.065zm0 2.06l-12-8.072v12.947h24v-12.947l-12 8.072z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section id="contacto" class="section contact-section  mt-12 mb-12">
             <div class="container contact-inner">
                 <h3>Entre em Contacto</h3>
                 <p>Envie-nos uma mensagem ou solicite um orçamento personalizado.</p>
                 <p class="text-center text-gray-600 text-xs">info@kayamoz.co.mz</p>
                 <a class="btn-secondary" href="mailto:info@cabinepro.co.mz">Enviar Email</a>
             </div>
-        </section>
+        </section> -->
 
         <footer class="footer sm:footer-horizontal bg-base-300 text-base-content p-10">
             <nav>
