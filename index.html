@@ -3,8 +3,45 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cabines & Contentores - Construções Modulares</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cabines & Contentores - Construções Modulares</title> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Kayamoz - Casas Modulares e Cabines em Fibra de Alta Resistência</title>
+    <meta name="description"
+        content="Kayamoz fabrica casas modulares, escritórios e cabines em fibra de alta resistência. Soluções modernas, rápidas e sustentáveis para obras e habitação em Moçambique." />
+    <meta name="keywords"
+        content="casas modulares, cabines, escritórios modulares, moçambique, fibra de vidro, construção rápida, kayamoz">
+
+    <!-- AUTOR -->
+    <meta name="author" content="Kayamoz" />
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- OPEN GRAPH (FACEBOOK/WHATSAPP) -->
+    <meta property="og:title" content="Kayamoz - Casas e Cabines Modulares" />
+    <meta property="og:description"
+        content="Casas modulares resistentes e prontas em poucos dias. Soluções inteligentes em fibra para empresas e famílias." />
+    <meta property="og:image"
+        content="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333469/kayalogo_dyvcwi.jpg" />
+    <meta property="og:url" content="https://kayamoz.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kayamoz - Casas Modulares e Cabines" />
+    <meta name="twitter:description" content="Soluções modernas em fibra para habitação e escritórios." />
+    <meta name="twitter:image"
+        content="https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333469/kayalogo_dyvcwi.jpg" />
+
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://kayamoz.com" />
+
+    <!-- PWA BÁSICO (Opcional mas recomendado) -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#0B3B8D" />
 
     <!-- Fontes -->
     <link
@@ -18,308 +55,301 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <!DOCTYPE html>
-    <html lang="pt">
 
 
 
-    <!DOCTYPE html>
-    <html lang="pt">
-
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Hero Carrossel com Fade</title>
-        <link rel="icon" href="./public/favicon.png" type="image/png" />
-        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 
-        <!-- Tailwind + DaisyUI -->
-        <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" type="text/css" />
-        <script src="https://cdn.tailwindcss.com"></script>
 
-        <style>
-            #loader {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: #ffffff;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                z-index: 9999;
-                transition: opacity 0.5s ease;
+
+
+
+
+
+
+
+    <style>
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        /* Animação do spinner */
+        .spinner {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #10d231;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
             }
 
-            /* Animação do spinner */
-            .spinner {
-                border: 8px solid #f3f3f3;
-                border-top: 8px solid #10d231;
-                border-radius: 50%;
-                width: 60px;
-                height: 60px;
-                animation: spin 1s linear infinite;
+            100% {
+                transform: rotate(360deg);
             }
+        }
 
-            @keyframes spin {
-                0% {
-                    transform: rotate(0deg);
-                }
+        /* Conteúdo da página oculto inicialmente */
+        #content {
+            display: none;
+            padding: 20px;
+        }
 
-                100% {
-                    transform: rotate(360deg);
-                }
-            }
+        /* === Fundo animado === */
+        .bg-slide {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            animation: bgFade 15s infinite;
+            transition: opacity 1.5s ease-in-out;
+        }
 
-            /* Conteúdo da página oculto inicialmente */
-            #content {
-                display: none;
-                padding: 20px;
-            }
+        .bg1 {
+            background-image: url('https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333117/kayamozz_ibztbh.jpg');
+            animation-delay: 0s;
+        }
 
-            /* === Fundo animado === */
-            .bg-slide {
-                position: absolute;
-                inset: 0;
-                background-size: cover;
-                background-position: center;
-                opacity: 0;
-                animation: bgFade 15s infinite;
-                transition: opacity 1.5s ease-in-out;
-            }
+        .bg2 {
+            background-image: url('https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333120/kayamoz1_iygbjc.jpg');
+            animation-delay: 5s;
+        }
 
-            .bg1 {
-                background-image: url('https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333117/kayamozz_ibztbh.jpg');
-                animation-delay: 0s;
-            }
+        .bg3 {
+            background-image: url('https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333120/WhatsApp_Image_2025-10-07_at_16.56.34_2_ltwh4x.jpg');
+            animation-delay: 10s;
+        }
 
-            .bg2 {
-                background-image: url('https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333120/kayamoz1_iygbjc.jpg');
-                animation-delay: 5s;
-            }
+        @keyframes bgFade {
 
-            .bg3 {
-                background-image: url('https://res.cloudinary.com/dduk9hsl4/image/upload/v1760333120/WhatsApp_Image_2025-10-07_at_16.56.34_2_ltwh4x.jpg');
-                animation-delay: 10s;
-            }
-
-            @keyframes bgFade {
-
-                0%,
-                33% {
-                    opacity: 1;
-                }
-
-                40%,
-                100% {
-                    opacity: 0;
-                }
-            }
-
-            /* === Animações de texto === */
-            @keyframes slideUp {
-                from {
-                    transform: translateY(20px);
-                    opacity: 0;
-                }
-
-                to {
-                    transform: translateY(0);
-                    opacity: 1;
-                }
-            }
-
-            .animate-slideUp {
-                animation: slideUp 1s ease-in-out forwards;
-            }
-
-            @keyframes fadeText {
-                from {
-                    opacity: 0;
-                }
-
-                to {
-                    opacity: 1;
-                }
-            }
-
-            .animate-fadeText {
-                animation: fadeText 1.5s ease-in-out forwards;
-            }
-
-            /* Animação de texto */
-            @keyframes slideUp {
-                from {
-                    transform: translateY(20px);
-                    opacity: 0;
-                }
-
-                to {
-                    transform: translateY(0);
-                    opacity: 1;
-                }
-            }
-
-            .animate-slideUp {
-                animation: slideUp 1s ease-in-out forwards;
-            }
-
-            @keyframes fadeText {
-                from {
-                    opacity: 0;
-                }
-
-                to {
-                    opacity: 1;
-                }
-            }
-
-            .animate-fadeText {
-                animation: fadeText 1.5s ease-in-out forwards;
-            }
-
-            /* Carrossel automático */
-            .slide {
-                position: absolute;
-                animation: fadeCarousel 15s infinite;
-            }
-
-            .slide:nth-child(1) {
-                animation-delay: 0s;
-            }
-
-            .slide:nth-child(2) {
-                animation-delay: 5s;
-            }
-
-            .slide:nth-child(3) {
-                animation-delay: 10s;
-            }
-
-            @keyframes fadeCarousel {
-
-                0%,
-                30% {
-                    opacity: 1;
-                    z-index: 10;
-                }
-
-                33%,
-                100% {
-                    opacity: 0;
-                    z-index: 0;
-                }
-            }
-
-
-            /*  */
-            @keyframes fadeIn {
-                from {
-                    opacity: 0;
-                    transform: scale(0.95);
-                }
-
-                to {
-                    opacity: 1;
-                    transform: scale(1);
-                }
-            }
-
-            .animate-fadeIn {
-                animation: fadeIn 1.5s ease-in-out forwards;
-            }
-
-            @keyframes slideUp {
-                from {
-                    transform: translateY(20px);
-                    opacity: 0;
-                }
-
-                to {
-                    transform: translateY(0);
-                    opacity: 1;
-                }
-            }
-
-            .animate-slideUp {
-                animation: slideUp 1.2s ease-in-out forwards;
-            }
-
-            @keyframes fadeText {
-                0% {
-                    opacity: 0;
-                }
-
-                50% {
-                    opacity: 0.8;
-                }
-
-                100% {
-                    opacity: 1;
-                }
-            }
-
-            .animate-fadeText {
-                animation: fadeText 2s ease-in-out forwards;
-            }
-
-            /* Animação de texto digitando */
-            @keyframes typing {
-                from {
-                    width: 0;
-                }
-
-                to {
-                    width: 100%;
-                }
-            }
-
-            @keyframes blink {
-                50% {
-                    border-color: transparent;
-                }
-            }
-
-            .typing-text {
-                overflow: hidden;
-                border-right: .15em solid #fff;
-                white-space: nowrap;
-                animation: typing 3s steps(40, end), blink .8s step-end infinite;
-            }
-
-            /* Transição suave entre slides */
-            .fade-slide {
-                opacity: 0;
-                transition: opacity 1.5s ease-in-out;
-            }
-
-            .fade-slide.active {
+            0%,
+            33% {
                 opacity: 1;
-                z-index: 1;
             }
 
+            40%,
+            100% {
+                opacity: 0;
+            }
+        }
 
-
-            @keyframes marquee {
-                0% {
-                    transform: translateX(0%);
-                }
-
-                100% {
-                    transform: translateX(-50%);
-                }
+        /* === Animações de texto === */
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
             }
 
-            .animate-marquee {
-                display: flex;
-                width: max-content;
-                animation: marquee 20s linear infinite;
+            to {
+                transform: translateY(0);
+                opacity: 1;
             }
-        </style>
+        }
 
-    </head>
+        .animate-slideUp {
+            animation: slideUp 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeText {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animate-fadeText {
+            animation: fadeText 1.5s ease-in-out forwards;
+        }
+
+        /* Animação de texto */
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .animate-slideUp {
+            animation: slideUp 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeText {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animate-fadeText {
+            animation: fadeText 1.5s ease-in-out forwards;
+        }
+
+        /* Carrossel automático */
+        .slide {
+            position: absolute;
+            animation: fadeCarousel 15s infinite;
+        }
+
+        .slide:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .slide:nth-child(2) {
+            animation-delay: 5s;
+        }
+
+        .slide:nth-child(3) {
+            animation-delay: 10s;
+        }
+
+        @keyframes fadeCarousel {
+
+            0%,
+            30% {
+                opacity: 1;
+                z-index: 10;
+            }
+
+            33%,
+            100% {
+                opacity: 0;
+                z-index: 0;
+            }
+        }
+
+
+        /*  */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .animate-slideUp {
+            animation: slideUp 1.2s ease-in-out forwards;
+        }
+
+        @keyframes fadeText {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .animate-fadeText {
+            animation: fadeText 2s ease-in-out forwards;
+        }
+
+        /* Animação de texto digitando */
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        .typing-text {
+            overflow: hidden;
+            border-right: .15em solid #fff;
+            white-space: nowrap;
+            animation: typing 3s steps(40, end), blink .8s step-end infinite;
+        }
+
+        /* Transição suave entre slides */
+        .fade-slide {
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .fade-slide.active {
+            opacity: 1;
+            z-index: 1;
+        }
+
+
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee 20s linear infinite;
+        }
+    </style>
+
+</head>
 
 
 <body style="padding: 0px ;margin: 0px;max-width: 100%; background-color: #f9f9f9; ">
